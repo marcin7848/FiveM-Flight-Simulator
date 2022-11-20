@@ -1,0 +1,208 @@
+Remember to add 'ensure name' to server.cfg
+All mods was tested while playing 2 players so they should work good. Notify me if there is some bugs.
+!!!! All scripts are connected so they should be installed together (except Flight instruments) !!!!
+
+1. FlightInstruments
+- changed positions of indicators (and texts)
+- switch state by clicking key: "2"
+states:
++ show indicators
++ show text above minimap
++ hide all
+
+2. status
+- auto changing status when ATC/GC/APU will log in in menu
+- showing e.g. "LSIA ATC || SSIA APU Online || Rest UNICOM" instead of "LSIA ATC, SSIA APU Online, Rest UNICOM"
+- of course you can switch status by log in as ATC/GC/APU in menus (more while NativeUILua below)
+- when player leaves job or leave game status will update
+- hide/show status by pressing "3"
+
+NEW MODS
+
+3. fuel
+- all vehicles have fuel
+- when vehicle is out of fuel, engines are stopped
+- each spawning vehicle (via vMenu etc.) is spawned with 10% fuel and with turned off engines
+- fuel is consumed when engines are on. Consumption depends on the speed (faster = higher fuel consumption) (about 45% fuel is used by flying from lsia to ssia)
+- show/hide fuel by pressing "4"
+How to refuel?
+It depends if GC at specific airport is online (online at specific airport means - not gc just online but GC logged via GC Menu to job as GC on specific airport (more in NativeUiLua below))
+So:
+a) If GC at specific airport is offline, each pilot can use Pilot menu and refuel own plane (engines have to be off)
+b) If GC is online: Pilot needs to ask GC for refueling and GC is able to refuel pilots (more about refueling by pilots in NativeUILUA below)
+
+!!!IMPORTANT!!!
+You need to set airports coordinates in fuel/fuel.lua
+e.g.:
+{permActiveRefueling=0, firstX=-1429.31, firstY=-1922.57, secondX = -881.77, secondY = -3847.4}
++ permActiveRefueling = 1/0 - if set to 1 it doesn't matter that GC is online/offline, pilot always can refuel own plane at specific airport
++ the next parameters are points:
+P1(firstX, firstY)
+P2(secondX, secondY)
+They are creating a square. e.g.
+P1 ------
+|	|
+|	|
+|	|
+------- P2
+
+If pilot is in that square and permActiveRefueling == 0 and GC for this airport is online, the pilot cannot refuel by himself
+Use vMenu and get coordinates for another airpoirts than LSIA (take points at the edges and even a little above sea maybe - remember, square should contains whole airport)
+
+!!!!!!!!!!!!!!!!!!!!!!!!MOST IMPORTANT THING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+How to add another aiport and modify existed? (there are connection between fuel and status mods)
+A. Go to status/statusServer.lua
+B. Add value/edit variables airportStatus and copyAirportStatus
+e.g. We want to add new airport ZAC and edit current airport SSIA to SSRA
+local airportStatus = {
+	{"LSIA", 
+		{"ATC", {}},
+		{"GC", {}},
+		{"APU", {}}
+	},
+	{"SSIA", 
+		{"ATC", {}},
+		{"GC", {}},
+		{"APU", {}}
+	}
+}
+
+change to:
+local airportStatus = {
+	{"LSIA", 
+		{"ATC", {}},
+		{"GC", {}},
+		{"APU", {}}
+	},
+	{"SSRA", 
+		{"ATC", {}},
+		{"GC", {}},
+		{"APU", {}}
+	},
+	{"ZAC", 
+		{"ATC", {}},
+		{"GC", {}},
+		{"APU", {}}
+	}
+}
+
+!!!!!!SAME THING FOR VARIABLE copyAirportStatus !!!!!!
+
+C. Go to fuel/fuel.lua
+D. Modify variable airportCoords
+to our example:
+local airportCoords = {
+	{permActiveRefueling=0, firstX=-1429.31, firstY=-1922.57, secondX = -881.77, secondY = -3847.4}, --LSIA
+	{permActiveRefueling=0, firstX=10.0, firstY=10.0, secondX = 20.0, secondY = 20.0} --SSIA
+}
+change to:
+local airportCoords = {
+	{permActiveRefueling=0, firstX=-1429.31, firstY=-1922.57, secondX = -881.77, secondY = -3847.4}, --LSIA
+	{permActiveRefueling=0, firstX=100.0, firstY=100.0, secondX = 200.0, secondY = 200.0}, --SSRA
+	{permActiveRefueling=0, firstX=50.0, firstY=50.0, secondX = 80.0, secondY = 80.0}, --ZAC
+}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!WHAT IS IMPORANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+airportStatus and copyAirportStatus and airportCoords have to have the same rows. After our changing they have 3. It's important, very!!! It affects mods: status/fuel and many menus in NativeUILUA (below about this)
+
+
+4. ratingFlights
+- possiblilty to rate pilots by ATC
+- each pilot can store their points (they are showing at the bottom right)
+- show/hide points by pressing "4"
+- points are stored in the server - restarts don't remove them
+- pilot can earn points only if 2 atc is online (at different airports - about log in by ATC to specific airport in NativeUILua below) (1 pilot at departure airport, 1 pilot at arrival airport)
+- the pilot can earn max 8 points by flight:
+Points:
++1 - Pilot has declared same flying altitude as declared by ATC for this pilot
++1 - Pilot has declared same squawk as declared by ATC for this pilot
++1 - Pilot has declared same frequency after departure as declared by ATC for this pilot
++1 - Pilot has reached while flying to arrival airport altitude given by ATC for this pilot
++0 / +1 / +2 - points depend on the ATC (departure airport) rating - +0 if ATC rated pilot as 'Bad' (pilot didn't follow any procedures), +1 - ATC rated pilot as 'Partly good' (pilot has followed not all procedures), +2 - ATC rated pilot as 'Good' - pilot has followed all standard procedures (means asked for everything, followed instructions, didn't make mistakes e.g. didn't use wrong taxiways)
++0 / +1 / +2 - points depend on the ATC (arrival airport) rating - same points as for departure ATC - 'Bad', 'Partly good', 'Good'. Good means that pilot asked for landing, followed procedures at the arrival airport etc.
+
+= +8 (max points)
+
+Points are added when both ATC (from departure and arrival airport) rate the pilot.
+About setting flight parameters etc. in NativeUILua below.
+
+
+5. NativeUILua
+- mod for menus
+- I've improved opening menu speed
+Now I will tell you about each menu, then bloew I'll tell you what you need to do before upload this mod and at the end I'll give you an example to rating flights.
+
+A. APU Menu
+- open by pressing '5'
+https://i.imgur.com/zNB5nnG.png
++ Work as APU in: <LSIA> - log in as APU to specific airport e.g. LSIA
+!!!!!What airports are available depends on status/statusServer.lua -> variable airportStatus and copyAirportStatus!!!!!
+- When APU log in, status is instantly updated!!!
++ Leave job - remove you from list of APU currently working
+
+B. GC Menu
+- open by pressing '6'
+https://i.imgur.com/D5YhZDD.png
++ Work as GC in <LSIA> - same as APU Menu
++ Leave job - same as APU Menu
++ Refueling Players - showing you nearby players (distance of 35m) possible to refuel - just press specific player to start fueling him (and look at notification - because maybe player didn't turn off engines and you need to inform him via Voice Chat about it)
+!!!!IMPORTANT THING!!!!
+Nearby players are loaded while opening menu. So e.g. to see nearby players if you moving somewhere you need to close menu and then open it again - that's because it's not necesseary server load to refreshing it online
+
+C. ATC Menu
+- open by pressing '7'
+https://i.imgur.com/JqumdV3.png
++ Work as ATC / Leave job - same as APU Menu
+
+!!!!!!the below options showing you just players If you are ATC at specific airport, so if pilot sends ifr request to LSIA and you are SSIA ATC you won't see request there (just LSIA ATC will see it)!!!!!
+
++ Requests - showing you IFR/VFR requests from players (it is for rationg players, e.g. of rating player below)
++ Rate after departure - rate player as Bad/Partly good/Good after departure
++ Rate arrivals - rate player as Bad/Partly good/Good when player will land and vacated to gate
+
+D. Staff Menu
+- open by pressing '8'
+https://i.imgur.com/HTMwydW.png
++ Change emergencies - allow/disaalow emergencies
++ Reset status - remove all atc/gc/apu from work and set status to UNICOM
+
+E. Pilot Menu
+- open by pressing '9'
+https://i.imgur.com/bwDTOXZ.png
++ Check status players - showing on the chat status for all airports and usernames for specific ATC/GC/APU job
++ Refuel - start refueling own vehicle (engines must be off and gc has to be offline for specific airport (more in fuel section above))
++ Request IFR clearance <LSIA> - send IFR request to ATC at specific airport
++ Request VFR clearance <LSIA> - send VFR request to ATC at specific airport
++ Flight parameters - set flight parameters given by ATC via Voice Chat
+
+
+!!!!!!!!!!!!!!!!!!!WHAT YOU NEED TO DO!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+In NativeUILua open apuMenu.lua, gcMenu.lua and atcMenu.lua
+- You need to check there is player is APU/GC/ATC. For that all player can open each menu. You need to disallow it. I don't know how you are checking if player is APU/GC/ATC but I wrote there where to add an condition, e.g.
+for gcMenu.lua find:
+if IsControlJustPressed(0, 159) then and you need to add condition here, e.g.:
+if IsControlJustPressed(0, 159) and PlayerIsGC() then
+
+
+
+Now example of rating flights.
+1. Player send IFR request to LSIA ATC
+2. In 'Requests' for ATC LSIA this player is shown
+3. Player request IFR/VFR via Voice/Text chat
+4. ATC gives permission and parameters via Voice Chat and set them in 'Requests' menu for this pilot
+ATC needs to enter:
+- Flying altitude: e.g. 2000
+- Squawk: e.g. 2121
+- Frequency after departure: 121.1
+- Shortcut for arrival airport of this pilot: e.g. SSIA (possible shortcut you can set in status/statusServer.lua in variable airportStatus and copyAirportStatus)
+5. At the same time pilot can set in his menu 'Flight parameters'. He can set:
+- Flying altitude
+- Squawk
+- Frequency after departure
+6. Now the pilot does standard procedures via voice/text chat.
+7. Player takes off runway and changing fequency
+8. Now ATC LSIA rate pilot in 'Rate after departure' as e.g. Good (this player is removed from menu 'Rate after departure')
+9. Pilot flies to SSIA asking for everthing
+10. Pilot parked at gate.
+11. ATC SSIA rating pilot in 'Rate arrivals' as e.g. Good.
+12. Pilot is removed from 'Rate arrivals' and pilot earns points.

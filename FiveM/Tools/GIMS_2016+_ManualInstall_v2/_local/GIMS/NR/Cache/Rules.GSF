@@ -1,0 +1,350 @@
+(
+GIMS.CurrentGame.Core.strRules \
+PresetFiles:#("C:\\Users\\HumanBox\\AppData\\Local\\\\GIMS\\NR/Cache\\Default.GSF","C:\\Users\\HumanBox\\AppData\\Local\\\\GIMS\\NR\\Cache\\Modified.GSF") \
+ProMode:true \
+ActivePresetID:2 \
+PresetNames:#("Default","Modified") \
+EngineVDMapping:#(
+#("Frostbite 2","Frostbite 3","Frostbite 3.5","YETI engine"),
+#(
+#(
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#normal,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:#(1,2,4,3) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#color,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#color,#color,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,3,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#TEXCOORD,#TEXCOORD,#normal,#tangent,#TEXCOORD,#color) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:#(1,2,7,4,5,6,3,8) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,3,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#color,#TEXCOORD,#TEXCOORD,#normal,#tangent,#TEXCOORD,#color) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:#(1,2,3,8,5,6,7,4,9) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+)),
+#(
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#BLENDWEIGHT) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#color) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#normal,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:#(1,2,4,3) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#color,#normal,#tangent,#TEXCOORD,#color) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:#(3,4,4,4,4,4,4) \
+TargetChannelOrder:#(1,4,5,6,7,2,3) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:#(3,4,4,4,4,4,2) \
+TargetChannelOrder:#(1,4,5,6,7,2,3) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#BLENDWEIGHT,#color,#normal,#tangent,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:#(1,2,3,6,7,8,5,4) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#normal,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1,2,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#color,#tangent,#normal,#BINORMAL,#TEXCOORD,#BLENDWEIGHT,#BLENDINDICES,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#color,#normal,#tangent,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4,4,4,4,4,4) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:unsupplied \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1,1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4,4,4,4,4,4,4,4,4,1) \
+TargetChannelOrder:#(1,11,3,4,5,6,7,8,9,10,2,12,13,14) \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+)),
+#(
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,2) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#normal,#tangent,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#BLENDWEIGHT,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4,4) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#BLENDWEIGHT,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4,2) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,1,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4,4,4,1) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2,2,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#BLENDINDICES,#BLENDINDICES,#BLENDWEIGHT,#BLENDWEIGHT,#normal,#tangent,#TEXCOORD) \
+SourceValueCounts:#(4,4,4,4,4,4,4,2) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,1,2,2,1,1,1,1,1) \
+TargetChannelModifiers:unsupplied \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#tangent,#BLENDINDICES,#BLENDINDICES,#BLENDWEIGHT,#BLENDWEIGHT,#normal,#BINORMAL,#TEXCOORD) \
+SourceValueCounts:#(3,4,4,4,4,4,4,4,2) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:unsupplied \
+)),
+#(
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(1,2) \
+TargetChannelModifiers:#(unsupplied,
+#(255,#divide)) \
+TargetChannelPerValueMods:unsupplied \
+TargetChannelNames:#(#position,#color) \
+SourceValueCounts:#(4,4) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:unsupplied \
+SourceChannelNames:#(#position,#color) \
+),
+(
+GIMS.CurrentGame.Core.strVDMap \
+SourceValueTypeIDs:#(3,3,2,2,2,1,1) \
+TargetChannelModifiers:#(unsupplied,
+#(1024,#divide),
+#(255,#divide),
+#(255,#divide),unsupplied,unsupplied,unsupplied) \
+TargetChannelPerValueMods:#(#XYZMultWDiv6553500,unsupplied,unsupplied,unsupplied,unsupplied,unsupplied,unsupplied) \
+TargetChannelNames:#(#position,#TEXCOORD,#color,#BLENDWEIGHT,#BLENDINDICES,#normal,#tangent) \
+SourceValueCounts:#(4,2,4,4,4,4,4) \
+TargetChannelOrder:unsupplied \
+TargetTypeIDs:#(3,2,2,2,2,1,1) \
+SourceChannelNames:#(#position,#TEXCOORD,#color,#BLENDWEIGHT,#BLENDINDICES,#normal,#tangent) \
+)))) \
+changed:false \
+PresetCount:2 \
+)

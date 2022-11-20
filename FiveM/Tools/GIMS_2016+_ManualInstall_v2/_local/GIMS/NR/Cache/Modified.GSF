@@ -1,0 +1,28 @@
+(
+GIMS.CurrentGame.Core.TypeLibrary.UIPreset \
+PositionY:0.0000000 \
+FlipFaces:false \
+PositionX:0.0000000 \
+OffsetU:0.0000000 \
+BonesMode:0 \
+Bump:0 \
+FlipU:false \
+RotationY:0.0000000 \
+MirrorX:false \
+PositionZ:0.0000000 \
+ScaleV:0.0000000 \
+OffsetV:0.0000000 \
+FlipV:true \
+scale:0.0000000 \
+MirrorY:false \
+RotationX:0.0000000 \
+ImportMode:true \
+path:"" \
+IDs:"" \
+RotationZ:0.0000000 \
+Diffuse:0 \
+Specular:0 \
+FormatIndex:0 \
+MirrorZ:false \
+ScaleU:0.0000000 \
+)

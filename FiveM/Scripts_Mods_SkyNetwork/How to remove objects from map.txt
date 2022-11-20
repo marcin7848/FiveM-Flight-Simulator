@@ -1,0 +1,112 @@
+How to remove objects from map
+Made by: Warmix (marcin7848)
+
+You need:
+- CodeWalker
+- OpenIV
+- Autodesk 3DS Max with GIMS Evo (https://gtaforums.com/topic/929447-gta-v-gims-for-3dsmax-2017-2020/) (find at 4 page link to download)
+
+1. Open CodeWalker and find object to delete
+https://i.imgur.com/zDkErNu.png
+I want to delete this plane. I've already removed stairs (here in CodeWalker we do not remove nothing because there is a possibility to lose access to FiveM servers because FiveM checks modifications - you can change here anything but do not save nothing)
+
+2. In CodeWalker press 'T' to open toolbar and open side menu by click '<<' in the top right corner.
+
+3. Make sure:
+Mode: World View
+In toolbar pick Select objects
+https://i.imgur.com/phLksL7.png
+
+and in side menu select 'Selection'
+
+4. Pick and object by clicking right mouse button
+
+5. Copy value from Ymap:
+https://i.imgur.com/8PsfUXZ.png
+We have: ap1_02_strm_0.ymap
+
+6. Make sure there is no file named: ap1_02_strm_0.ymap and hei_ap1_02_strm_0.ymap in 'stream' folder. This is a folder where you will place yamps after deleting object. 
+
+Important: In one ymap file could be more than 1 object, soo if in 'stream' folder is ymap called 'ap1_02_strm_0' that means someone or you've already deleted some object from this file. In the case, just copy 'ap1_02_strm_0.ymap' and 'hei_ap1_02_strm_0.ymap' and move to step 8.
+
+I don't have this file so I'm going to step 7.
+
+7. Open OpenIV and open searching (ctrl+F3) and put there ymap file name without '.ymap'
+https://i.imgur.com/bcqnYIj.png
+and search.
+There should be always 2 files - one with 'hei_name' and just 'name'
+
+Select both (ctrl+click) and press right mouse button and pick 'Extract selected files'. You can save them in Desktop
+
+8. Now you have 2 files with extention '.ymap'. Move them to 'mods' folder in gta 5.
+In my base it's:
+D:\Steam\steamapps\common\Grand Theft Auto V\mods\
+
+9. Back to OpenIV. Roll to up left panel and open 'mods'. You should see 2 files that you've copied:
+https://i.imgur.com/xqXk4VI.png
+
+Make sure you have enabled 'Edit mode'. Press right mouse button and "Edit" (any file).
+
+10. Back to CodeWalker. Cope value from 'name'.
+https://i.imgur.com/unxXCGT.png
+I have 'ap1_02_planes009'.
+
+11. Back to OpenIV and search this value in file:
+https://i.imgur.com/Qna0PTP.png
+
+IMPORTANT:
+In one file there could be more than one result of searching. TO be sure this is yor object check:
+In OpenIV: <position x="-1192.66200000" y="-2918.07500000" z="18.68946000"/>
+
+with coords in CodeWalker: value from field 'Position'.
+
+If you are sure positions are same, go to next step.
+
+12. Check position of this object in OpenIV. e.g. change z to: -60.68946000. (I was talking about it with expert in editing maps and there is no posibility to remove base objects from FiveM servers (via map editors), you can just change theirs position, so move them underground :) )
+
+So finally it should looks like:
+https://i.imgur.com/TDQTJpi.png
+
+13. Press save and do the same thing for second file. Open, search for value from 'name', edit coords and save.
+
+14. When you edit both files:
+Copy them from 'mods' folder to 'stream' folder located into resources of server: e.g.
+FXServer/server-data/resources/removingObjects/stream/
+
+I will provide to Phillip 'removeObject' folder, He will install it, you just need to add more ymap files to 'stream'.
+
+15. So finally 'stream' folder looks like:
+https://i.imgur.com/DzCW5wO.png
+2 files for just removed plane, 2 another files for removed stairs
+
+16. When 2 files are placed into 'stream' folder jut restart server.
+Important: It's not possible to restart just this mod (restart removeObjects). I think it should crash server. There is a need to full restart.
+
+Now it looks like:
+https://i.imgur.com/MlUkZhF.png
+
+17. IMPORTANT! Stairs has been deleted correctly, but plane? Yeah, it's disappeared but you still cannot move where it's stand (like invisible object). Why? There are collisions. Some of objects have collisions, other are not. Our plane has collisions.
+So now we have to delete this collisions.
+
+Go to CodeWalker. Switch mode to collisions:
+https://i.imgur.com/fpd7qWU.jpg
+
+17. Copy title and search it with OpenIV. In my case it's: 'Poly 17: ap1_02_0.ybn'
+https://i.imgur.com/BQYjwUE.png
+
+Find in OpenIV just: 'ap1_02_0'
+You should find some files with extension: '.ybn'
+Open each and find where is your object. In my case I can find plane in 'ap1_02_0.ybn'
+
+https://i.imgur.com/tfdVOuK.png
+
+18. Now 'export to open formats' it and we need to delete this collision plane.
+To do this we need 3D Max with GIMS Evo. Look at movie on the top how to use it.
+
+19. Now just delete our plane (we don't need to delete that building) in 3D Max and export it with GIMS Evo (https://www.youtube.com/watch?v=igmjmt8QrZ0)
+
+20. Import file to OpenIV to mods folder. Then extract this file with 'extract' to any location to get file with extension '.ybn'.
+
+20. Copy file (in my case 'ap1_02_0.ybn') to 'stream' folder (e.g. FXServer/server-data/resources/removingObjects/stream/)
+
+21. That's all. Object and collison have been deleted. Now just restart server.

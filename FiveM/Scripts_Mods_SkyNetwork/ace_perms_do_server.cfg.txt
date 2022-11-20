@@ -1,0 +1,8 @@
+add_ace staffAce staffAce allow                                                                                         
+add_ace atc atc allow                                                                                                   
+add_ace gc gc allow                                                                                                     
+add_ace apu apu allow                                                                                                   
+add_principal identifier.license:0e5d45dbf1c32220d3d7f8e9f4bf715745b655e2 staffAce                                      
+add_principal identifier.license:0e5d45dbf1c32220d3d7f8e9f4bf715745b655e2 atc                                           
+add_principal identifier.license:0e5d45dbf1c32220d3d7f8e9f4bf715745b655e2 gc                                            
+add_principal identifier.license:0e5d45dbf1c32220d3d7f8e9f4bf715745b655e2 apu   

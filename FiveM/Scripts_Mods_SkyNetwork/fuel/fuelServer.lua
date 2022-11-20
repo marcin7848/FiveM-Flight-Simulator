@@ -1,0 +1,15 @@
+RegisterNetEvent("requestRefuelByGC")
+AddEventHandler("requestRefuelByGC", function(playerId, gcId)
+   TriggerClientEvent("refuelByGC", playerId, gcId)
+end)
+
+RegisterNetEvent("triggerNotifyFuelGC")
+AddEventHandler("triggerNotifyFuelGC", function(gcId, text)
+   TriggerClientEvent("notifyFuelGC", gcId, text)
+end)
+
+RegisterNetEvent("getEntityModel")
+AddEventHandler("getEntityModel", function(playerId)
+	--local entityModel = GetEntityModel(playerId)
+   --print(entityModel)
+end)

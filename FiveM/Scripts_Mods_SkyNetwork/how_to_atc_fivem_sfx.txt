@@ -1,0 +1,97 @@
+**This is a detailed look into getting from the ground into the air in SFX**  *and other small things*
+
+**Spawning**
+
+-Spawning is available at any open gate, use the F1 vMenu to spawn a plane.
+ F1 => Vehicle Related Options => Vehicle Spawner => Custom Vehicles => Choose one out of the Singapore Airlines List #info 
+
+**IFR/VFR**
+
+- Here is a step by step guide (Including ATC) in getting IFR clearance **Please Note** some Air Traffic Controllers will not hand out IFR/VFR Clearance, this usually depends on skill level. 
+
+```diff
+- What is IFR/VFR?
+```
+IFR or Instrument Flight Rules is a way of flying the plane using electronic instruments used when VFR or Visual Flight Rules is unavailable,  VFR is flying the plane by hand, This should only be requested on a clear day.
+
+
+**Requesting IFR/VFR**
+
+
+- (Singapore) **Singapore 121** Requesting `IFR/VFR` clearance to `PIA/LSIA/SSIA/SSRA/GRAPESEED/CARRIER/ZANCUDO`
+- (ATC) **Singapore 121** `IFR/VFR` Approved, Climb and maintain 1000 FT 01 minutes after departure, Expect runway 30 Left, Squawk 1322 **Singapore 121**
+- (Singapore)**Singapore 121** *Readback if Necessary*
+
+**Requesting Push and Start**
+
+- (Singapore) **Singapore 121** Requesting Push and Start from Gate `Current gate number`
+- (ATC) **Singapore 121** Push and Start approved facing North
+- (Singapore) **Singapore 121** *readback if necessary*
+-(Singapore ) *Push back from gate using slight reverse*
+
+
+**Requesting Taxi Information**
+
+Please consult to #charts  in the main server for further information on taxi routes
+
+- (Singapore) **Singapore 121** Requesting taxi information to 30 Right
+- (ATC) **Singapore 121** Continue down Charlie, Cross 12 Left Via Alpha 5 and enter Delta Via Delta 1, Continue down Delta and hold short of 30 Right
+- (Singapore) **Singapore 121** *Readback if necessary*
+
+**Taxiing**
+
+Follow the Air Traffic Controller's Directions, Continue down Charlie, Cross 12 Left Via Alpha 5 and enter Delta Via Delta 1, Continue down Delta and hold short of 30 Right, Hold short of 30 Right and await permission to line up and take off
+
+**Line Up and Wait / Take off**
+
+(Singapore) **Singapore 121** Requesting permission to line up and wait runway 30 right
+(ATC) **Singapore 121** Line up and wait 30 right Singapore 121
+(Singapore) *readback if necessary*
+
+(Singapore) **Singapore 121** Requesting permission to take off 30 Right
+(ATC) **Singapore 121** Permission to take off 30 Right, Winds are calm, weather clear. 
+(Singapore) **Singapore 121** *readback if necessary*
+
+*After about 25 seconds in flight
+
+(Singapore) **Singapore 121** Changing frequency to SSIA Tower
+(ATC) **Singapore 121** Frequency change approved, contact SSIA tower at 112.45 
+(Singapore) **Singapore 121** *readback if necessary*
+
+**In-Flight Transmissions**
+
+(Singapore) **Singapore 121** Good morning SSIA tower, Singapore airlines checking into your frequency, currently `time` outside of landing runway 36
+(ATC) **Singapore 121** Welcome to SSIA Tower, plelease contact when on long final
+(Singapore) **Singapore 121** *readback if necessary*
+
+**Long Final**
+
+(Singapore) **Singapore 121** Coming up on long final runway 36
+(ATC) **Singapore 121** Long final runway 36, contact on short final
+(Singapore) **Singapore 121** *readback if necessary*
+
+**Short Final**
+
+(Singapore) **Singapore 121** Short final runway 36
+(ATC) **Singapore 121** Permission to land Runway 36, Winds calm, visibility clear. 
+(Singapore) **Singapore 121** *Readback if necessary*
+(Singapore) *Butter landing*
+(ATC) **Singapore 121** Welcome to SSIA, Please vacate the runway VIA alpha and take a gate of your choice.
+(Singapore) **Singapore 121** *readback if necessary*
+
+
+**Other Things to know.**
+
+*Server IP'S*
+
+Server 1 IP: `play.sfxnetwork.co.uk:30120` 
+Server 2 IP: `play.sfxnetwork.co.uk:30180`
+
+*How To Clear Cache*
+
+1: Go to C:\Users\*Your Name*\AppData\Local\FiveM\FiveM.app
+2: Locate the `cache` folder
+3: Drag the folder into the recycle bin or Right click and delete.
+4: Start FiveM and wait for it to install things
+5: Ready to play :)
+
